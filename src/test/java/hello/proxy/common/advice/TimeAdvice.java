@@ -12,7 +12,7 @@ public class TimeAdvice implements MethodInterceptor {
         long startTime = System.currentTimeMillis();
 
 //        Object result = method.invoke(target, args);
-        Object result = invocation.proceed();
+        Object result = invocation.proceed();   //실제 target 호출
 
         long endTime = System.currentTimeMillis();
         long resultTime = endTime - startTime;
